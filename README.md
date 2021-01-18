@@ -34,9 +34,9 @@ until we reached a 50-50 class distribution.  Text augmentation was performed wi
 
 ## Results
 
-Both models follow the same architecture.  That is:
+Both models follow the same architecture:
 
-> [DistilBERT CLS Token Layer] + [Dense 256] + [Dense 32] + [Single Output Layer]
+    [DistilBERT CLS Token Layer] + [Dense 256] + [Dense 32] + [Single Output Layer]
 
 The only difference is whether they were trained on the `balanced` dataset with `binary_crossentropy` loss
 or the `unbalanced` dataset with `focal_loss`.
