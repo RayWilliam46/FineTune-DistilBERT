@@ -31,3 +31,24 @@ To get our `balanced` dataset, we used [nlpaug](https://github.com/makcedward/nl
 until we reached a 50-50 class distribution.  Text augmentation was performed with synonym replacement using BERT embeddings.
 
 *Any files or folders with `unbalanced` or `balanced` in the name is in relation to these two datasets.*
+
+## Results
+
+Both models follow the same architecture.  That is:
+
+> [DistilBERT CLS Token Layer] + [Dense 256] + [Dense 32] + [Single Output Layer]
+
+The only difference is whether they were trained on the `balanced` dataset with `binary_crossentropy` loss
+or the `unbalanced` dataset with `focal_loss`.
+
+The results are as follows:
+
+**balanced_model**
+
+1. Test Accuracy:  0.8801 
+2. Test AUC-ROC:   0.9656
+
+**unbalanced_model**
+
+1. Test Accuracy:  0.9218
+2. Test AUC-ROC:   0.9691
