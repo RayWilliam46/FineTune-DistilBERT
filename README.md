@@ -1,4 +1,4 @@
-# FineTune-DistilBERT
+# FineTune-DistilBERT :hugs:
 HuggingFace Transformers:  Fine-tuning DistilBERT for Binary Classification Tasks
 
 ## About
