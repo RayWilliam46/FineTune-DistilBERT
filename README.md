@@ -52,3 +52,31 @@ The results are as follows:
 
 1. Test Accuracy:  0.9218
 2. Test AUC-ROC:   0.9691
+
+## Credits
+
+@inproceedings{wolf-etal-2020-transformers,
+    title = "Transformers: State-of-the-Art Natural Language Processing",
+    author = "Thomas Wolf and Lysandre Debut and Victor Sanh and Julien Chaumond and Clement Delangue and Anthony Moi and Pierric Cistac and Tim Rault and Rémi Louf and Morgan Funtowicz and Joe Davison and Sam Shleifer and Patrick von Platen and Clara Ma and Yacine Jernite and Julien Plu and Canwen Xu and Teven Le Scao and Sylvain Gugger and Mariama Drame and Quentin Lhoest and Alexander M. Rush",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+    month = oct,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-demos.6",
+    pages = "38--45"
+}
+
+@misc{ma2019nlpaug,
+  title={NLP Augmentation},
+  author={Edward Ma},
+  howpublished={https://github.com/makcedward/nlpaug},
+  year={2019}
+}
+
+@misc{Kaggle,
+  title={Toxic Comment Classification Challenge},
+  author={Jigsaw / Conversation AI},
+  howpublished={https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data},
+  year={2017}
+}
