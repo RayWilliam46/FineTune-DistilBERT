@@ -1,18 +1,18 @@
-def batch_encode(tokenizer, sentences):
+def batch_encode(tokenizer, texts):
     """""""""
-    A function that encodes a batch of sentences and returns the sentences'
+    A function that encodes a batch of texts and returns the texts'
     corresponding encodings and attention masks that are ready to be fed 
     into a pre-trained transformer model.
 
 
     Input:
         - tokenizer:  tokenizer object from the PreTrainedTokenizer Class
-        - sentences:  a list of strings where each string represents a sentence
+        - texts:  a list of strings where each string represents a piece of text
     Output:
-        - input_ids:       a sentence encoded as a tf.Tensor object
-        - attention_mask:  the sentence's attention mask encoded as a tf.Tensor object
+        - input_ids:       a text encoded as a tf.Tensor object
+        - attention_mask:  the text's attention mask encoded as a tf.Tensor object
     """""""""
-    inputs = tokenizer.batch_encode_plus(sentences,
+    inputs = tokenizer.batch_encode_plus(texts,
                                          max_length=params['MAX_LENGTH'],
                                          padding='longest',  # implements dynamic padding
                                          truncation=True,
