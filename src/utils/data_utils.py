@@ -20,6 +20,7 @@ def combine_toxic_classes(df):
                - 'comment_text' containing strings of text.
                - 'isToxic' binary target variable containing 0's and 1's.
     """""""""
+    
     # Create a binary classification label for 'isToxic'
     # and drop miscellaneous labels.
     df['isToxic'] = (df['toxic'] == 1)
@@ -49,6 +50,7 @@ def undersample_majority(df, percent_conserve):
         - downsampled_df:    A new pandas DataFrame that has been shuffled
                              and has had its majority class downsampled.
     """""""""
+    
     # Get rows of clean and toxic texts
     clean_texts = df[df['isToxic'] == 0]
     toxic_texts = df[df['isToxic'] == 1]
@@ -71,8 +73,8 @@ def analyze_dist(df):
                by the 'isToxic' binary indicator column.
     Output:
         - Prints class distribution (toxic or non-toxic) statistics of df.
-
     """""""""
+    
     print('Total rows:           ', df.shape[0])
     print('Clean texts:          ', df.shape[0] - df['isToxic'].sum())
     print('Toxic texts:          ', df['isToxic'].sum())
@@ -110,9 +112,10 @@ def augment_text(df, aug, num_threads, num_times):
                          text via CPU
         - num_times:     Integer representing the number of times to augment text.
     Output:
-        - df:            The same pandas DataFrame with augmented data appended to it
-                         and with rows randomly shuffled.
+        - df:            Copy of the same pandas DataFrame with augmented data 
+                         appended to it and with rows randomly shuffled.
     """""""""
+    
     # Get rows of data to augment
     to_augment = df[df['isToxic'] == 1]
     to_augmentX = to_augment['comment_text']
@@ -120,7 +123,7 @@ def augment_text(df, aug, num_threads, num_times):
 
     # Build up dictionary containing augmented data
     aug_dict = {'comment_text': [], 'isToxic': to_augmentY}
-    for i in tqdm.tqdm(range(num_times)):
+    for i in tqdm(range(num_times)):
         augX = [augment_sentence(x, aug, num_threads) for x in to_augmentX]
         aug_dict['comment_text'].extend(augX)
 
