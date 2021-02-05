@@ -83,6 +83,27 @@ def analyze_dist(df):
 
 
 
+def get_relevant_words(text, to_conserve):
+    """""""""
+    Takes a string of text and returns the first N words in that text.
+    
+    Input:
+        - text:         String of text
+        - to_conserve:  Integer representing number of text's words to conserve
+    Output:
+        - String containing first (to_conserve) words of text. 
+    """""""""
+    
+    # Select the first N words in the text
+    word_list = text.split()[:to_conserve]
+    
+    # Build up a string containing words in word_list
+    new_string = ' '.join(word for word in word_list)
+    
+    return new_string
+
+
+
 def augment_sentence(sentence, aug, num_threads):
     """""""""
     Constructs a new sentence via text augmentation.
