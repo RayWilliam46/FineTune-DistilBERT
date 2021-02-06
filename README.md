@@ -16,6 +16,8 @@ Specifically, we will be using:
 
 to predict toxic comments on a modified version of the [Jigsaw Toxic Comment](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge) dataset on Kaggle.
 
+
+
 If anything is confusing, please see the accompanying [Medium article](https://raywilliam.medium.com/hugging-face-transformers-fine-tuning-distilbert-for-binary-classification-tasks-490f1d192379) for an explanation of my methodologies! 
 
 ## Datasets
